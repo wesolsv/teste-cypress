@@ -1,2 +1,2 @@
 # teste-cypress
-Teste para vaga de QA - Cypress
+Teste para QA - Cypress
