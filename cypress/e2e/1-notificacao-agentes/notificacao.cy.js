@@ -5,20 +5,18 @@ describe('Criar notificacao para agentes', () => {
     })
 
     it('acessar-notificacao-agentes', () =>{
-        cy.get('#side_agentes').click();
-        cy.get('#side_agente_notificacoes').click();
+        cy.accTelaNot();
         cy.url().should('eq', 'https://sacnew.ascbrazil.com.br/agente-notificacoes');
         cy.contains('h1', ' Notificações de agente').should('be.visible');
     })
 
     it('criar-notificacao-agentes', () =>{
-        cy.get('#side_agentes').click();
-        cy.get('#side_agente_notificacoes').click();
-        cy.contains('h1', ' Notificações de agente').should('be.visible');
+        cy.accTelaNot();
         cy.get('.btn-add-new').click();
-        cy.get('#nom_msg').type('Mensagem de teste inclusa');
-        cy.contains('button', 'Salvar').click();
-        cy.contains('#tblBody', 'Mensagem de teste inclusa').should('be.visible');
+        cy.get('#nom_msg').type('teste mensagem');
+        cy.contains('button', 'Salvar').click();     
+        cy.get('#tblBody tr')
+            .contains('tr', 'teste mensagem')
+            .and('contain', 'user_qa');
     })
-
 })
