@@ -1,0 +1,22 @@
+{
+  "name": "teste-cypress",
+  "version": "1.0.0",
+  "description": "Teste de cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesolsv/teste-cypress.git"
+  },
+  "author": "Wesley Oliveira Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesolsv/teste-cypress/issues"
+  },
+  "homepage": "https://github.com/wesolsv/teste-cypress#readme",
+  "dependencies": {
+    "cypress": "^10.1.0"
+  }
+}
